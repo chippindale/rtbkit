@@ -1,4 +1,3 @@
-$(eval $(call test,arch,boost))
 $(eval $(call test,bitops_test,arch,boost))
 $(eval $(call test,cpuid_test,arch,boost))
 $(eval $(call test,futex_test,arch,boost))
