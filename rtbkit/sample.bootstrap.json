@@ -1,12 +1,3 @@
-// Contains basic configuration options for an rtbkit installation. Can be
-// provided to services by either:
-//
-// - Renaming the file to bootstrap.json and placing in the current working
-//   directory.
-// - Setting the environment variable RTBKIT_BOOTSTRAP to the path of the
-//   bootstrap.json file.
-// - Set the -B or --bootstrap command line argument to the path of the
-//   bootstrap.json file.
 {
     // Defines a namespace within zookeeper and carbon.
     "installation": "rtb-test",
@@ -21,11 +12,12 @@
     // for tests).
     "zookeeper-uri": "localhost:2181",
 
+
     // Location of the Carbon instances which will be used to log various
     // metrics. If missing, then a barebone internal event logger will be
     // created which can be useful to write tests.
-    // "carbon-uri": ["carbon1.kittens.org:2003", "carbonA.kittens.org:2003"],
-    
+    "carbon-uri": ["127.0.0.1:2003", "127.0.0.1:2003"],
+
     // Interval, in seconds, at which statistics are sent to graphite.
     // Must be set to the same value as the smallest retention period
     // in graphite's storage-schema.conf. Defaults to 1.
